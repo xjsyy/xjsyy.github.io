@@ -1,1 +1,1 @@
-# My blog
+# YYC'S Blog
