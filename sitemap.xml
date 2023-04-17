@@ -2,20 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/articles/</loc>
+    <loc>https://xjsyy.github.io/</loc>
+    <lastmod>2023-04-15T16:51:51+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://xjsyy.github.io/blog/</loc>
+    <lastmod>2023-04-15T16:51:51+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/contact/</loc>
+    <loc>https://xjsyy.github.io/blog/hello_world/</loc>
+    <lastmod>2023-04-15T16:51:51+08:00</lastmod>
   </url><url>
-    <loc>http://example.org/projects/math-brain-trainer/</loc>
+    <loc>https://xjsyy.github.io/aericles/</loc>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://xjsyy.github.io/articles/</loc>
   </url><url>
-    <loc>http://example.org/projects/</loc>
+    <loc>https://xjsyy.github.io/categories/</loc>
   </url><url>
-    <loc>http://example.org/articles/article/</loc>
+    <loc>https://xjsyy.github.io/contact/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://xjsyy.github.io/articles/sarticle/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/iarticle/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/aericles/farticle/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/farticle/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/tarticle/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/laravel_request/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/projects/math-brain-trainer/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/projects/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/article/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/tags/</loc>
   </url>
 </urlset>

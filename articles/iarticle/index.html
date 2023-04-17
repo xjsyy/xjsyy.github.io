@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Laravel__Controllers |  YYC＇S Blog</title>
+<meta name="keywords" content="" />
+<meta name="description" content="Click on me to see more content.">
+<meta name="author" content="Yang Yvchun">
+<link rel="canonical" href="https://xjsyy.github.io/articles/iarticle/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://xjsyy.github.io/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://xjsyy.github.io/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://xjsyy.github.io/images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://xjsyy.github.io/images/apple-touch-icon.png">
+<link rel="mask-icon" href="https://xjsyy.github.io/images/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://xjsyy.github.io" accesskey="h" title=" YYC＇S Blog (Alt + H)"> YYC＇S Blog</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="/" title="Home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href="https://xjsyy.github.io/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xjsyy.github.io/articles/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://xjsyy.github.io/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
+    <h1 class="post-title">
+      Laravel__Controllers
+    </h1>
+    <div class="post-description">
+      Click on me to see more content.
+    </div>
+    <div class="post-meta">2 min&nbsp;·&nbsp;Yang Yvchun</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#writing-controllershttpslaravelcomdocs10xcontrollerswriting-controllers" aria-label="Writing Controllers"><a href="https://laravel.com/docs/10.x/controllers#writing-controllers">Writing Controllers</a></a><ul>
+                        
+                <li>
+                    <a href="#basic-controllershttpslaravelcomdocs10xcontrollersbasic-controllers" aria-label="Basic Controllers"><a href="https://laravel.com/docs/10.x/controllers#basic-controllers">Basic Controllers</a></a></li>
+                <li>
+                    <a href="#single-action-controllershttpslaravelcomdocs10xcontrollerssingle-action-controllers" aria-label="Single Action Controllers"><a href="https://laravel.com/docs/10.x/controllers#single-action-controllers">Single Action Controllers</a></a></li></ul>
+                </li>
+                <li>
+                    <a href="#controller-middlewarehttpslaravelcomdocs10xcontrollerscontroller-middleware" aria-label="Controller Middleware"><a href="https://laravel.com/docs/10.x/controllers#controller-middleware">Controller Middleware</a></a></li>
+                <li>
+                    <a href="#resource-controllershttpslaravelcomdocs10xcontrollersresource-controllers" aria-label="Resource Controllers"><a href="https://laravel.com/docs/10.x/controllers#resource-controllers">Resource Controllers</a></a><ul>
+                        
+                <li>
+                    <a href="#partial-resource-routeshttpslaravelcomdocs10xcontrollersrestful-partial-resource-routes" aria-label="Partial Resource Routes"><a href="https://laravel.com/docs/10.x/controllers#restful-partial-resource-routes">Partial Resource Routes</a></a></li>
+                <li>
+                    <a href="#nested-resourceshttpslaravelcomdocs10xcontrollersrestful-nested-resources" aria-label="Nested Resources"><a href="https://laravel.com/docs/10.x/controllers#restful-nested-resources">Nested Resources</a></a></li>
+                <li>
+                    <a href="#naming-resource-routeshttpslaravelcomdocs10xcontrollersrestful-naming-resource-routes" aria-label="Naming Resource Routes"><a href="https://laravel.com/docs/10.x/controllers#restful-naming-resource-routes">Naming Resource Routes</a></a></li></ul>
+                </li>
+                <li>
+                    <a href="#dependency-injection--controllershttpslaravelcomdocs10xcontrollersdependency-injection-and-controllers" aria-label="Dependency Injection &amp;amp; Controllers"><a href="https://laravel.com/docs/10.x/controllers#dependency-injection-and-controllers">Dependency Injection &amp; Controllers</a></a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#constructor-injectionhttpslaravelcomdocs10xcontrollersconstructor-injection" aria-label="Constructor Injection"><a href="https://laravel.com/docs/10.x/controllers#constructor-injection">Constructor Injection</a></a></li>
+                <li>
+                    <a href="#method-injectionhttpslaravelcomdocs10xcontrollersmethod-injection" aria-label="Method Injection"><a href="https://laravel.com/docs/10.x/controllers#method-injection">Method Injection</a></a>
+                </li>
+            </ul>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content">
+  <h2 id="writing-controllershttpslaravelcomdocs10xcontrollerswriting-controllers"><a href="https://laravel.com/docs/10.x/controllers#writing-controllers">Writing Controllers</a></h2>
+<h3 id="basic-controllershttpslaravelcomdocs10xcontrollersbasic-controllers"><a href="https://laravel.com/docs/10.x/controllers#basic-controllers">Basic Controllers</a></h3>
+<p>Running the <code>make:controller</code> Artisan command to generate a controller. By default, all of the controllers for your application are stored in the <code>app/Http/Controllers</code> directory:</p>
+<pre tabindex="0"><code class="language-commmand" data-lang="commmand">php artisan make:controller UserController
+</code></pre><p>an example of a basic controller</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Http\Controllers</span>;
+
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Models\User</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\View\View</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Show the profile for a given user.
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">show</span>(<span style="color:#a6e22e">string</span> $id)<span style="color:#f92672">:</span> <span style="color:#a6e22e">View</span>
+    {
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">view</span>(<span style="color:#e6db74">&#39;user.profile&#39;</span>, [
+            <span style="color:#e6db74">&#39;user&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">::</span><span style="color:#a6e22e">findOrFail</span>($id)
+        ]);
+    }
+}
+</code></pre></div><p>Once you have written a controller class and method, you may define a route to the controller method like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Http\Controllers\UserController</span>; 
+
+<span style="color:#a6e22e">Route</span><span style="color:#f92672">::</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/user/{id}&#39;</span>, [<span style="color:#a6e22e">UserController</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>, <span style="color:#e6db74">&#39;show&#39;</span>]);
+</code></pre></div><h3 id="single-action-controllershttpslaravelcomdocs10xcontrollerssingle-action-controllers"><a href="https://laravel.com/docs/10.x/controllers#single-action-controllers">Single Action Controllers</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Http\Controllers</span>;
+
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Models\User</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Http\Response</span>;
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProvisionServer</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Provision a new web server.
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __invoke()
+    {
+        <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>    }
+}
+</code></pre></div><h2 id="controller-middlewarehttpslaravelcomdocs10xcontrollerscontroller-middleware"><a href="https://laravel.com/docs/10.x/controllers#controller-middleware">Controller Middleware</a></h2>
+<p><a href="https://laravel.com/docs/10.x/middleware">Middleware</a> may be assigned to the controller&rsquo;s routes in your route files:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#a6e22e">Route</span><span style="color:#f92672">::</span><span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;profile&#39;</span>, [<span style="color:#a6e22e">UserController</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>, <span style="color:#e6db74">&#39;show&#39;</span>])<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">middleware</span>(<span style="color:#e6db74">&#39;auth&#39;</span>);
+</code></pre></div><p>Using the <code>middleware</code> method within your controller&rsquo;s constructor, you can assign middleware to the controller&rsquo;s actions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Instantiate a new controller instance.
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct()
+    {
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">middleware</span>(<span style="color:#e6db74">&#39;auth&#39;</span>);
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">middleware</span>(<span style="color:#e6db74">&#39;log&#39;</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">only</span>(<span style="color:#e6db74">&#39;index&#39;</span>);
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">middleware</span>(<span style="color:#e6db74">&#39;subscribed&#39;</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">except</span>(<span style="color:#e6db74">&#39;store&#39;</span>);
+    }
+}
+</code></pre></div><h2 id="resource-controllershttpslaravelcomdocs10xcontrollersresource-controllers"><a href="https://laravel.com/docs/10.x/controllers#resource-controllers">Resource Controllers</a></h2>
+<p>use the <code>make:controller</code> Artisan command&rsquo;s <code>--resource</code> option to quickly create a controller to handle these actions:</p>
+<pre tabindex="0"><code>php artisan make:controller PhotoController --resource
+</code></pre><p>This command will generate a controller at<code>app/Http/Controllers/PhotoController.php</code></p>
+<h3 id="partial-resource-routeshttpslaravelcomdocs10xcontrollersrestful-partial-resource-routes"><a href="https://laravel.com/docs/10.x/controllers#restful-partial-resource-routes">Partial Resource Routes</a></h3>
+<p>To quickly generate an API resource controller that does not include the <code>create</code> or <code>edit</code> methods, use the <code>--api</code> switch when executing the <code>make:controller</code> command:</p>
+<pre tabindex="0"><code>/photos/{photo}/comments/{comment}
+</code></pre><h3 id="nested-resourceshttpslaravelcomdocs10xcontrollersrestful-nested-resources"><a href="https://laravel.com/docs/10.x/controllers#restful-nested-resources">Nested Resources</a></h3>
+<p>define routes to a nested resource.   use &ldquo;dot&rdquo; notation in your route.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Http\Controllers\PhotoCommentController</span>;
+ 
+<span style="color:#a6e22e">Route</span><span style="color:#f92672">::</span><span style="color:#a6e22e">resource</span>(<span style="color:#e6db74">&#39;photos.comments&#39;</span>, <span style="color:#a6e22e">PhotoCommentController</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
+</code></pre></div><h3 id="naming-resource-routeshttpslaravelcomdocs10xcontrollersrestful-naming-resource-routes"><a href="https://laravel.com/docs/10.x/controllers#restful-naming-resource-routes">Naming Resource Routes</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Http\Controllers\PhotoController</span>;
+ 
+<span style="color:#a6e22e">Route</span><span style="color:#f92672">::</span><span style="color:#a6e22e">resource</span>(<span style="color:#e6db74">&#39;photos&#39;</span>, <span style="color:#a6e22e">PhotoController</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">names</span>([
+    <span style="color:#e6db74">&#39;create&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;photos.build&#39;</span>
+]);
+</code></pre></div><h2 id="dependency-injection--controllershttpslaravelcomdocs10xcontrollersdependency-injection-and-controllers"><a href="https://laravel.com/docs/10.x/controllers#dependency-injection-and-controllers">Dependency Injection &amp; Controllers</a></h2>
+<h4 id="constructor-injectionhttpslaravelcomdocs10xcontrollersconstructor-injection"><a href="https://laravel.com/docs/10.x/controllers#constructor-injection">Constructor Injection</a></h4>
+<p>The Laravel <a href="https://laravel.com/docs/10.x/container">service container</a> is used to resolve all Laravel controllers. As a result, you are able to type-hint any dependencies your controller may need in its constructor. The declared dependencies will automatically be resolved and injected into the controller instance:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+ 
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Http\Controllers</span>;
+ 
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Repositories\UserRepository</span>;
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Create a new controller instance.
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> __construct(
+        <span style="color:#66d9ef">protected</span> <span style="color:#a6e22e">UserRepository</span> $users,
+    ) {}
+}
+</code></pre></div><h4 id="method-injectionhttpslaravelcomdocs10xcontrollersmethod-injection"><a href="https://laravel.com/docs/10.x/controllers#method-injection">Method Injection</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+ 
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Http\Controllers</span>;
+ 
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Http\RedirectResponse</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Http\Request</span>;
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Store a new user.
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">store</span>(<span style="color:#a6e22e">Request</span> $request)<span style="color:#f92672">:</span> <span style="color:#a6e22e">RedirectResponse</span>
+    {
+        $name <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">name</span>;
+ 
+        <span style="color:#75715e">// Store the user...
+</span><span style="color:#75715e"></span> 
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">redirect</span>(<span style="color:#e6db74">&#39;/users&#39;</span>);
+    }
+}
+</code></pre></div>
+  </div>
+
+  <footer class="post-footer">
+
+<div class="share-buttons">
+
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Laravel__Controllers on linkedin"
+        href="https://www.linkedin.com/in/heycharlola/">
+        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+            <path
+                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+        </svg>
+    </a>
+</div>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span> built with ♥ from charlola
+      
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

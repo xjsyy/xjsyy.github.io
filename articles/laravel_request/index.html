@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Surprise Surprise |  YYC＇S Blog</title>
+<title>Laravel__Request |  YYC＇S Blog</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Click on me to see more content.">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/articles/article/" />
+<link rel="canonical" href="https://xjsyy.github.io/articles/laravel_request/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -126,12 +126,12 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
     <h1 class="post-title">
-      Surprise Surprise
+      Laravel__Request
     </h1>
     <div class="post-description">
       Click on me to see more content.
     </div>
-    <div class="post-meta">1 min&nbsp;·&nbsp;Yang Yvchun</div>
+    <div class="post-meta">2 min&nbsp;·&nbsp;Yang Yvchun</div>
   </header> <div class="toc">
     <details >
         <summary accesskey="c" title="(Alt + C)">
@@ -140,10 +140,32 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#thank-you-for-your-support" aria-label="Thank you for your support!">Thank you for your support!</a><ul>
+                    <a href="#interacting-with-the-request" aria-label="Interacting With The Request">Interacting With The Request</a><ul>
                         
                 <li>
-                    <a href="#" aria-label="thank you!">thank you!</a>
+                    <a href="#accessing-the-request" aria-label="Accessing The Request">Accessing The Request</a><ul>
+                        
+                <li>
+                    <a href="#dependency-injection--route-parameters" aria-label="Dependency Injection &amp;amp; Route Parameters">Dependency Injection &amp; Route Parameters</a></li></ul>
+                </li>
+                <li>
+                    <a href="#request-path-host--method" aria-label="Request Path, Host, &amp;amp; Method">Request Path, Host, &amp; Method</a><ul>
+                        
+                <li>
+                    <a href="#retrieving-the-request-path" aria-label="Retrieving The Request Path">Retrieving The Request Path</a></li>
+                <li>
+                    <a href="#inspecting-the-request-path--route" aria-label="Inspecting The Request Path / Route">Inspecting The Request Path / Route</a></li>
+                <li>
+                    <a href="#retrieving-the-request-url" aria-label="Retrieving The Request URL">Retrieving The Request URL</a></li>
+                <li>
+                    <a href="#retrieving-the-request-host" aria-label="Retrieving The Request Host">Retrieving The Request Host</a></li>
+                <li>
+                    <a href="#retrieving-the-request-method" aria-label="Retrieving The Request Method">Retrieving The Request Method</a></li>
+                <li>
+                    <a href="#request-headers" aria-label="Request Headers">Request Headers</a></li></ul>
+                </li>
+                <li>
+                    <a href="#request-ip-address" aria-label="Request IP Address">Request IP Address</a>
                 </li>
             </ul>
             </li>
@@ -153,21 +175,74 @@
 </div>
 
   <div class="post-content">
-  <h3 id="thank-you-for-your-support">Thank you for your support!</h3>
-<p>Hello. If you like this template, I&rsquo;d be happy to get a <a href="https://ko-fi.com/heycharlola">coffee donation</a> :)</p>
-<figure><img src="/images/thankyou.png"/><figcaption>
-            <h4>thank you!</h4>
-        </figcaption>
-</figure>
+  <p>provides an object-oriented way o interact with the current HTTP request being handled by your application as well as retrieve the input, cookies, and files that were
+submitted with the request.</p>
+<h2 id="interacting-with-the-request">Interacting With The Request</h2>
+<h3 id="accessing-the-request">Accessing The Request</h3>
+<p>To obtain an instance of the current HTTP request via dependency injection, you should type-hint the <code>Illuminate\Http\Request</code> class on your route closure or controller method. The incoming request instance will automatically be injected by the Laravel <a href="https://laravel.com/docs/10.x/container">service container</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+ 
+<span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">App\Http\Controllers</span>;
+ 
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Http\RedirectResponse</span>;
+<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Illuminate\Http\Request</span>;
+ 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Controller</span>
+{
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * Store a new user.
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">store</span>(<span style="color:#a6e22e">Request</span> $request)<span style="color:#f92672">:</span> <span style="color:#a6e22e">RedirectResponse</span>
+    {
+        $name <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">input</span>(<span style="color:#e6db74">&#39;name&#39;</span>);
+ 
+        <span style="color:#75715e">// Store the user...
+</span><span style="color:#75715e"></span> 
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">redirect</span>(<span style="color:#e6db74">&#39;/users&#39;</span>);
+    }
+}
+</code></pre></div><h4 id="dependency-injection--route-parameters">Dependency Injection &amp; Route Parameters</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">App\Http\Controllers\UserController</span>;
+<span style="color:#a6e22e">Route</span><span style="color:#f92672">::</span><span style="color:#a6e22e">put</span>(<span style="color:#e6db74">&#39;/user/{id}&#39;</span>, [<span style="color:#a6e22e">UserController</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>, <span style="color:#e6db74">&#39;update&#39;</span>]);
+</code></pre></div><h3 id="request-path-host--method">Request Path, Host, &amp; Method</h3>
+<h4 id="retrieving-the-request-path">Retrieving The Request Path</h4>
+<p>if the incoming request is targeted at <code>http://example.com/foo/bar</code>, the <code>path</code> method will return <code>foo/bar</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$uri <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">path</span>();
+</code></pre></div><h4 id="inspecting-the-request-path--route">Inspecting The Request Path / Route</h4>
+<p>The <code>is</code> method allows you to verify that the incoming request path matches a given pattern. You may use the <code>*</code> character as a wildcard when utilizing this method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> ($request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">is</span>(<span style="color:#e6db74">&#39;admin/*&#39;</span>)) {
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h4 id="retrieving-the-request-url">Retrieving The Request URL</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$url <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">url</span>(); 
 
+$urlWithQueryString <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fullUrl</span>();
+</code></pre></div><h4 id="retrieving-the-request-host">Retrieving The Request Host</h4>
+<p>You may retrieve the &ldquo;host&rdquo; of the incoming request via the <code>host</code>, <code>httpHost</code>, and <code>schemeAndHttpHost</code> methods:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">host</span>();
+$request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">httpHost</span>();
+$request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">schemeAndHttpHost</span>();
+</code></pre></div><h4 id="retrieving-the-request-method">Retrieving The Request Method</h4>
+<p>The <code>method</code> method will return the HTTP verb for the request. You may use the <code>isMethod</code> method to verify that the HTTP verb matches a given string:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$method <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">method</span>(); 
+<span style="color:#66d9ef">if</span> ($request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">isMethod</span>(<span style="color:#e6db74">&#39;post&#39;</span>)) {
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h4 id="request-headers">Request Headers</h4>
+<p>You may retrieve a request header from the <code>Illuminate\Http\Request</code> instance using the <code>header</code> method. If the header is not present on the request, <code>null</code> will be returned. However, the <code>header</code> method accepts an optional second argument that will be returned if the header is not present on the request</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$value <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;X-Header-Name&#39;</span>); 
 
+$value <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;X-Header-Name&#39;</span>, <span style="color:#e6db74">&#39;default&#39;</span>);
+</code></pre></div><h3 id="request-ip-address">Request IP Address</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$ipAddress <span style="color:#f92672">=</span> $request<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">ip</span>();
+</code></pre></div>
   </div>
 
   <footer class="post-footer">
 
 <div class="share-buttons">
 
-    <a target="_blank" rel="noopener noreferrer" aria-label="share Surprise Surprise on linkedin"
+    <a target="_blank" rel="noopener noreferrer" aria-label="share Laravel__Request on linkedin"
         href="https://www.linkedin.com/in/heycharlola/">
         <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
             <path
