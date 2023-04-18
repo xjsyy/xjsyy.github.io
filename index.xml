@@ -5,15 +5,16 @@
     <link>https://xjsyy.github.io/</link>
     <description>Recent content on  YYC＇S Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 16:51:51 +0800</lastBuildDate><atom:link href="https://xjsyy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://xjsyy.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello_world</title>
-      <link>https://xjsyy.github.io/blog/hello_world/</link>
-      <pubDate>Sat, 15 Apr 2023 16:51:51 +0800</pubDate>
+      <title>Bulid and Deploy</title>
+      <link>https://xjsyy.github.io/articles/bulid-and-deploy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://xjsyy.github.io/blog/hello_world/</guid>
-      <description></description>
+      <guid>https://xjsyy.github.io/articles/bulid-and-deploy/</guid>
+      <description>Bulid and Deploy 本博客在linux系统上用Hugo和Github Pages搭建,下面是参考步骤．
+第一步，建一个Ｇithub仓库 。 仓库命名为 username.github.io
+第二步，安装Hugo 。 sudo apt-get update sudo apt-get install hugo 第三步，新建一个Hugo网站 。 hugo new site yyc-blog #&amp;#39;yyc-blog&amp;#39;是我的网站名字 第四步，选择一个Hugo主题并克隆 。  打开Hugo Themes页面，选择一个你喜欢的主题。 将所选主题克隆至本地目录。  cd yyc-blog # 进入网站目录，用你的网站目录名替换 &amp;#34;lilian-blog&amp;#34;。 mkdir -p themes # 创建 &amp;#34;themes&amp;#34; 目录。 cd themes # 进入 &amp;#34;themes&amp;#34; 目录。 git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git tranquilpeak # 将 Tranquilpeak 主题克隆至 &amp;#34;tranquilpeak&amp;#34; 目录。 第五步：编辑配置文件 。   在 Hugo 网站文件夹的根目录下，使用 Visual Studio Code 打开config.</description>
     </item>
     
     <item>
