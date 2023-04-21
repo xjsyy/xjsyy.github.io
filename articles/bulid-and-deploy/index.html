@@ -189,7 +189,7 @@ sudo apt-get install hugo
 <li>打开<a href="https://themes.gohugo.io">Hugo Themes</a>页面，选择一个你喜欢的主题。</li>
 <li>将所选主题克隆至本地目录。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd yyc-blog <span style="color:#75715e"># 进入网站目录，用你的网站目录名替换 &#34;lilian-blog&#34;。</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd yyc-blog <span style="color:#75715e"># 进入网站目录，用你的网站目录名替换 &#34;yyc-blog&#34;。</span>
 mkdir -p themes <span style="color:#75715e"># 创建 &#34;themes&#34; 目录。</span>
 cd themes <span style="color:#75715e"># 进入 &#34;themes&#34; 目录。</span>
 git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git tranquilpeak <span style="color:#75715e"># 将</span>
@@ -228,7 +228,7 @@ theme = &ldquo;tranquilpeak&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo  <span style="color:#75715e"># 构建你的 Hugo 网站，默认将静态站点保存到 &#34;public&#34; 目录。</span>
 </code></pre></div><h2 id="第九步将网站文件夹转换为-git-库-">第九步：将网站文件夹转换为 Git 库 。</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd yyc-blog/public  <span style="color:#75715e"># 生成的 HTML 文件保存在 &#34;public&#34; 目录中，&#34;public&#34; 文件夹会被转换为 Git 库。 </span>
-git init  <span style="color:#75715e"># 初始化 Git 库。</span>
+git init  			<span style="color:#75715e"># 初始化 Git 库。</span>
 </code></pre></div><h2 id="第十步将-git-本地库关联至远程库-">第十步：将 Git 本地库关联至远程库 。</h2>
 <ol>
 <li>在 lilian-blog/public 目录下，为 Git 本地库添加远程库。</li>
@@ -247,7 +247,7 @@ git init  <span style="color:#75715e"># 初始化 Git 库。</span>
     ignorecase <span style="color:#f92672">=</span> true
     precomposeunicode <span style="color:#f92672">=</span> true
 <span style="color:#f92672">[</span>remote <span style="color:#e6db74">&#34;origin&#34;</span><span style="color:#f92672">]</span>
-    url <span style="color:#f92672">=</span> git@github.com:lilin90/lilin90.github.io.git
+    url <span style="color:#f92672">=</span> git@github.com:xjsyy/xjsyy.github.io.git
     fetch <span style="color:#f92672">=</span> +refs/heads/*:refs/remotes/origin/*
 </code></pre></div><p>如果 <code>[remote &quot;origin&quot;]</code> 信息正常显示，说明你的 Git 本地库已成功关联至远程库。</p>
 <h2 id="第十一步提交你的修改至本地库-">第十一步：提交你的修改至本地库 。</h2>
