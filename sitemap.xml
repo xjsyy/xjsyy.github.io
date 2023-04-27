@@ -2,8 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xjsyy.github.io/articles/config/</loc>
-  </url><url>
     <loc>https://xjsyy.github.io/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/aericles/</loc>
@@ -16,17 +14,7 @@
   </url><url>
     <loc>https://xjsyy.github.io/contact/</loc>
   </url><url>
-    <loc>https://xjsyy.github.io/articles/sarticle/</loc>
-  </url><url>
-    <loc>https://xjsyy.github.io/articles/iarticle/</loc>
-  </url><url>
     <loc>https://xjsyy.github.io/aericles/farticle/</loc>
-  </url><url>
-    <loc>https://xjsyy.github.io/articles/farticle/</loc>
-  </url><url>
-    <loc>https://xjsyy.github.io/articles/tarticle/</loc>
-  </url><url>
-    <loc>https://xjsyy.github.io/articles/laravel_request/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/projects/math-brain-trainer/</loc>
   </url><url>
