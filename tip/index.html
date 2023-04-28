@@ -5,14 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Math Braintrainer |  YYC＇S Blog</title>
+<title>Tip |  YYC＇S Blog</title>
 <meta name="keywords" content="" />
-<meta name="description" content="It&#39;s a game to train your mental calculation skills. During a fixed time period, randomized math questions pop up. How many of them can you answer correctly?">
+<meta name="description" content="HAPPY!">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/projects/math-brain-trainer/" />
+<link rel="canonical" href="https://xjsyy.github.io/tip/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
-    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://xjsyy.github.io/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://xjsyy.github.io/images/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://xjsyy.github.io/images/favicon-32x32.png">
@@ -20,6 +18,7 @@
 <link rel="mask-icon" href="https://xjsyy.github.io/images/apple-touch-icon.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://xjsyy.github.io/tip/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -59,7 +58,7 @@
 </noscript>
 </head>
 
-<body class="" id="top">
+<body class="list" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -114,7 +113,7 @@
             </li>
             <li>
                 <a href="https://xjsyy.github.io/tip/" title="Tip">
-                    <span>Tip</span>
+                    <span class="active">Tip</span>
                 </a>
             </li>
             <li>
@@ -125,26 +124,29 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a></div>
+  <h1>Tip</h1>
+</header>
+<div class="post-content">
+<p>HAPPY!</p>
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/projects/">Projects</a></div>
-    <h1 class="post-title">
-      Math Braintrainer
-    </h1>
-    <div class="post-description">
-      It&#39;s a game to train your mental calculation skills. During a fixed time period, randomized math questions pop up. How many of them can you answer correctly?
-    </div>
-    <div class="post-meta">0 min&nbsp;·&nbsp;Yang Yvchun</div>
-  </header> 
+</div>
 
 
-  <footer class="post-footer">
-
-
-
-  </footer>
+  <article class="post-entry"> 
+    <header class="entry-header">
+      <h2>Happy
+      </h2>
+    </header>
+    <section class="entry-content">
+      <p></p>
+    </section>
+    <section class="entry-content">
+      <img src="/images/happy.jpg">
+    </section>
+    <footer class="entry-footer">0 min&nbsp;·&nbsp;Yang Yvchun</footer>
+    <a class="entry-link" aria-label="post link to Happy" href="https://xjsyy.github.io/tip/happy/"></a>
 </article>
     </main>
     
@@ -212,53 +214,6 @@
         }
     })
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerText = 'copy';
-
-        function copyingDone() {
-            copybutton.innerText = 'copied!';
-            setTimeout(() => {
-                copybutton.innerText = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
 </script>
 </body>
 

@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>Happy</title>
+      <link>https://xjsyy.github.io/tip/happy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/tip/happy/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
       <title>Laravel__CSRF Protection</title>
       <link>https://xjsyy.github.io/aericles/farticle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -38,15 +47,6 @@ use Illuminate\Http\Request; Route::get(&amp;#39;/token&amp;#39;, function (Requ
     </item>
     
     <item>
-      <title>OS</title>
-      <link>https://xjsyy.github.io/articles/os-experiment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xjsyy.github.io/articles/os-experiment/</guid>
-      <description>#include &amp;lt;pthread.h&amp;gt;#include &amp;lt;stdio.h&amp;gt;#include &amp;lt;stdlib.h&amp;gt;#include &amp;lt;string.h&amp;gt;#include &amp;lt;unistd.h&amp;gt;// #include &amp;lt;sys/syscall.h&amp;gt; int s=0; int count=0; void *first(void *arg); void *second(void *arg); int main(int arg,int argc[]){ pthread_t aa,bb; pthread_create(&amp;amp;aa,NULL,first,NULL); pthread_create(&amp;amp;bb,NULL,second,NULL); pthread_join(aa,NULL); pthread_join(bb,NULL); return 0; } void *first(void *arg){ printf(&amp;#34;process id:%d and thread tid:%d\n&amp;#34;,getpid(),pthread_self()); while(1){ int a; scanf(&amp;#34;%d&amp;#34;,&amp;amp;a); if(a%2==0){ count++; }else{ s=1; break; } } return NULL; } void *second(void *arg){ while(1){ if(s){ printf(&amp;#34;%d\n&amp;#34;,count); break; } } return NULL; } </description>
-    </item>
-    
-    <item>
       <title>Surprise Surprise</title>
       <link>https://xjsyy.github.io/articles/article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -62,10 +62,9 @@ use Illuminate\Http\Request; Route::get(&amp;#39;/token&amp;#39;, function (Requ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://xjsyy.github.io/articles/vscode-config/</guid>
-      <description>本配置仅能运行C/C++程序，不具有Debug功能&amp;gt;
+      <description>本配置仅能 运行 C/C++程序，不具有Debug功能
  插件
- Code Runner &amp;amp; C/C++
- setting
+    setting
  Setting &amp;mdash;&amp;gt; Extensions &amp;ndash;&amp;gt; Run code configuration: select Run In terminal</description>
     </item>
     
