@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Articles |  YYC＇S Blog</title>
+<title>linux learn |  YYC＇S Blog</title>
 <meta name="keywords" content="" />
-<meta name="description" content=" ">
+<meta name="description" content="Click on me to see more content.">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/articles/" />
+<link rel="canonical" href="https://xjsyy.github.io/articles/linux-learn/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://xjsyy.github.io/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://xjsyy.github.io/images/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://xjsyy.github.io/images/favicon-32x32.png">
@@ -18,7 +20,6 @@
 <link rel="mask-icon" href="https://xjsyy.github.io/images/apple-touch-icon.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://xjsyy.github.io/articles/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +59,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -103,7 +104,7 @@
             </li>
             <li>
                 <a href="https://xjsyy.github.io/articles/" title="Articles">
-                    <span class="active">Articles</span>
+                    <span>Articles</span>
                 </a>
             </li>
             <li>
@@ -124,78 +125,64 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a></div>
-  <h1>Articles</h1>
-</header>
-<div class="post-content">
-<hr>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
+    <h1 class="post-title">
+      linux learn
+    </h1>
+    <div class="post-description">
+      Click on me to see more content.
+    </div>
+    <div class="post-meta">1 min&nbsp;·&nbsp;Yang Yvchun</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#vim-%e7%a7%bb%e5%8a%a8" aria-label="Vim 移动">Vim 移动</a>
+                </li>
+            </ul>
+        </div>
+    </details>
 </div>
 
+  <div class="post-content">
+  <p><code>sudo</code>:&ldquo;super user do&quot;something.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">missing:~$ ls -l /home
+drwxr-xr-x <span style="color:#ae81ff">1</span> missing  users  <span style="color:#ae81ff">4096</span> Jun <span style="color:#ae81ff">15</span>  <span style="color:#ae81ff">2019</span> missing
+</code></pre></div><p><code>r</code>:read	<code>w</code>:write	<code>x</code>:execute这条命令指出了　用户(<code>missing</code>)/用户组(<code>user</code>)/其他人　对该文件的使用权限．<code>－</code>表示无权限</p>
+<h3 id="vim-移动">Vim 移动</h3>
+<ul>
+<li>基本移动: <code>hjkl</code> （左， 下， 上， 右）</li>
+<li>词： <code>w</code> （下一个词）， <code>b</code> （词初）， <code>e</code> （词尾）</li>
+<li>行： <code>0</code> （行初）， <code>^</code> （第一个非空格字符）， <code>$</code> （行尾）</li>
+<li>屏幕： <code>H</code> （屏幕首行）， <code>M</code> （屏幕中间）， <code>L</code> （屏幕底部）</li>
+<li>翻页： <code>Ctrl-u</code> （上翻）， <code>Ctrl-d</code> （下翻）</li>
+<li>文件： <code>gg</code> （文件头）， <code>G</code> （文件尾）</li>
+<li>行数： <code>:{行数}&lt;CR&gt;</code> 或者 <code>{行数}G</code> ({行数}为行数)</li>
+<li>杂项： <code>%</code> （找到配对，比如括号或者 /* */ 之类的注释对）</li>
+<li>查找： <code>f{字符}</code>,<code>t{字符}</code> ,<code>F{字符}</code>,<code>T{字符}</code>
+<ul>
+<li>查找/到 向前/向后 在本行的{字符}</li>
+<li><code>,</code> / <code>;</code> 用于导航匹配</li>
+</ul>
+</li>
+<li>搜索: <code>/{正则表达式}</code>, <code>n</code> / <code>N</code> 用于导航匹配</li>
+</ul>
 
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Bulid and Deploy
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content....</p>
-    </section>
-    <footer class="entry-footer">2 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to Bulid and Deploy" href="https://xjsyy.github.io/articles/bulid-and-deploy/"></a>
-</article>
+  </div>
 
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Git branch
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to Git branch" href="https://xjsyy.github.io/articles/git-process-test/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>linux learn
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to linux learn" href="https://xjsyy.github.io/articles/linux-learn/"></a>
-</article>
+  <footer class="post-footer">
 
 
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Surprise Surprise
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to Surprise Surprise" href="https://xjsyy.github.io/articles/article/"></a>
-</article>
 
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>VScode configure
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to VScode configure" href="https://xjsyy.github.io/articles/vscode-config/"></a>
+  </footer>
 </article>
     </main>
     
@@ -263,6 +250,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

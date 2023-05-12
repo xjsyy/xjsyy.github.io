@@ -18,6 +18,27 @@
     </item>
     
     <item>
+      <title>Git branch</title>
+      <link>https://xjsyy.github.io/articles/git-process-test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/git-process-test/</guid>
+      <description>创建分支: git branch test　＃以&amp;#34;test&amp;#34;分支为例子 切换分支 git checkout test 合并分支 如果你想要把test分支合并到master分支：
+git checkout master #先切换回master分支 git merge test #合并操作 如果你想在合并后把原来的分支删除： git branch -d test	#删除本地分支 git push origin --delete test	#删除远程分支 </description>
+    </item>
+    
+    <item>
+      <title>linux learn</title>
+      <link>https://xjsyy.github.io/articles/linux-learn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/linux-learn/</guid>
+      <description>sudo:&amp;ldquo;super user do&amp;quot;something.
+missing:~$ ls -l /home drwxr-xr-x 1 missing users 4096 Jun 15 2019 missing r:read	w:write	x:execute这条命令指出了　用户(missing)/用户组(user)/其他人　对该文件的使用权限．－表示无权限
+Vim 移动  基本移动: hjkl （左， 下， 上， 右） 词： w （下一个词）， b （词初）， e （词尾） 行： 0 （行初）， ^ （第一个非空格字符）， $ （行尾） 屏幕： H （屏幕首行）， M （屏幕中间）， L （屏幕底部） 翻页： Ctrl-u （上翻）， Ctrl-d （下翻） 文件： gg （文件头）， G （文件尾） 行数： :{行数}&amp;lt;CR&amp;gt; 或者 {行数}G ({行数}为行数) 杂项： % （找到配对，比如括号或者 /* */ 之类的注释对） 查找： f{字符},t{字符} ,F{字符},T{字符}  查找/到 向前/向后 在本行的{字符} , / ; 用于导航匹配   搜索: /{正则表达式}, n / N 用于导航匹配  </description>
+    </item>
+    
+    <item>
       <title>Surprise Surprise</title>
       <link>https://xjsyy.github.io/articles/article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
