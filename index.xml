@@ -60,7 +60,7 @@ cat ~/.ssh/id_ed25519.pub 然后将内容复制到setting-&amp;gt;SSH and GPG ke
 3xx：重定向
 4xx：客户端错误，不存在的资源，无权限
 5xx：服务器错误
-状态码大全
+ 状态码大全
 HTTP协议 </description>
     </item>
     
