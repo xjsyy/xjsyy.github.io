@@ -5,12 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Articles |  YYC＇S Blog</title>
+<title>HTTP协议 |  YYC＇S Blog</title>
 <meta name="keywords" content="" />
-<meta name="description" content=" ">
+<meta name="description" content="Click on me to see more content.">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/articles/" />
+<link rel="canonical" href="https://xjsyy.github.io/articles/http/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://xjsyy.github.io/images/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://xjsyy.github.io/images/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://xjsyy.github.io/images/favicon-32x32.png">
@@ -18,7 +20,6 @@
 <link rel="mask-icon" href="https://xjsyy.github.io/images/apple-touch-icon.png">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://xjsyy.github.io/articles/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -58,7 +59,7 @@
 </noscript>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -103,7 +104,7 @@
             </li>
             <li>
                 <a href="https://xjsyy.github.io/articles/" title="Articles">
-                    <span class="active">Articles</span>
+                    <span>Articles</span>
                 </a>
             </li>
             <li>
@@ -124,117 +125,77 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a></div>
-  <h1>Articles</h1>
-</header>
-<div class="post-content">
-<hr>
+<main class="main">
 
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
+    <h1 class="post-title">
+      HTTP协议
+    </h1>
+    <div class="post-description">
+      Click on me to see more content.
+    </div>
+    <div class="post-meta">1 min&nbsp;·&nbsp;Yang Yvchun</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e7%89%b9%e7%82%b9" aria-label="特点">特点</a></li>
+                <li>
+                    <a href="#%e8%af%b7%e6%b1%82%e5%8d%8f%e8%ae%ae" aria-label="请求协议">请求协议</a><ul>
+                        
+                <li>
+                    <a href="#%e6%a0%bc%e5%bc%8f" aria-label="格式">格式</a></li></ul>
+                </li>
+                <li>
+                    <a href="#%e5%93%8d%e5%ba%94%e5%8d%8f%e8%ae%ae" aria-label="响应协议">响应协议</a><ul>
+                        
+                <li>
+                    <a href="#%e7%8a%b6%e6%80%81%e7%a0%81" aria-label="状态码">状态码</a></li></ul>
+                </li>
+                <li>
+                    <a href="#http%e5%8d%8f%e8%ae%ae" aria-label="HTTP协议">HTTP协议</a>
+                </li>
+            </ul>
+        </div>
+    </details>
 </div>
 
+  <div class="post-content">
+  <h1 id="特点">特点</h1>
+<ul>
+<li>无状态响应，多次请求之间不可共享数据</li>
+<li>速度快</li>
+<li>基于TCP，面向连接，安全</li>
+</ul>
+<h1 id="请求协议">请求协议</h1>
+<h2 id="格式">格式</h2>
+<p>请求行——请求头（名字：值）——请求体（POST特有）</p>
+<h1 id="响应协议">响应协议</h1>
+<p>响应行——响应头（名字：值）——响应体（POST特有）</p>
+<h2 id="状态码">状态码</h2>
+<p>1xx：响应中，临时，</p>
+<p>2xx：已成功</p>
+<p>3xx：重定向</p>
+<p>4xx：客户端错误，不存在的资源，无权限</p>
+<p>5xx：服务器错误</p>
+<p><img loading="lazy" src="../../static/images/image-20230903102640567.png" alt="image-20230903102640567"  />
+</p>
+<p><a href="https://cloud.tencent.com/developer/chapter/13553">状态码大全</a></p>
+<h1 id="http协议">HTTP协议</h1>
 
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Bulid and Deploy
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content....</p>
-    </section>
-    <footer class="entry-footer">2 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to Bulid and Deploy" href="https://xjsyy.github.io/articles/bulid-and-deploy/"></a>
-</article>
+  </div>
 
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Git branch
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to Git branch" href="https://xjsyy.github.io/articles/git-process-test/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>github ssh public key
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to github ssh public key" href="https://xjsyy.github.io/articles/ssh-public-key/"></a>
-</article>
+  <footer class="post-footer">
 
 
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>HTTP协议
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to HTTP协议" href="https://xjsyy.github.io/articles/http/"></a>
-</article>
 
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>JS DOM
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content....</p>
-    </section>
-    <footer class="entry-footer">2 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to JS DOM" href="https://xjsyy.github.io/articles/js/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>linux learn
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to linux learn" href="https://xjsyy.github.io/articles/linux-learn/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>Surprise Surprise
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to Surprise Surprise" href="https://xjsyy.github.io/articles/article/"></a>
-</article>
-
-
-  <article class="post-entry"> 
-    <header class="entry-header">
-      <h2>VScode configure
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>Click on me to see more content.</p>
-    </section>
-    <footer class="entry-footer">1 min&nbsp;·&nbsp;Yang Yvchun</footer>
-    <a class="entry-link" aria-label="post link to VScode configure" href="https://xjsyy.github.io/articles/vscode-config/"></a>
+  </footer>
 </article>
     </main>
     
@@ -302,6 +263,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = 'copy';
+
+        function copyingDone() {
+            copybutton.innerText = 'copied!';
+            setTimeout(() => {
+                copybutton.innerText = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

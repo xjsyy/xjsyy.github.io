@@ -48,6 +48,33 @@ cat ~/.ssh/id_ed25519.pub 然后将内容复制到setting-&amp;gt;SSH and GPG ke
     </item>
     
     <item>
+      <title>HTTP协议</title>
+      <link>https://xjsyy.github.io/articles/http/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/http/</guid>
+      <description>特点  无状态响应，多次请求之间不可共享数据 速度快 基于TCP，面向连接，安全  请求协议 格式 请求行——请求头（名字：值）——请求体（POST特有）
+响应协议 响应行——响应头（名字：值）——响应体（POST特有）
+状态码 1xx：响应中，临时，
+2xx：已成功
+3xx：重定向
+4xx：客户端错误，不存在的资源，无权限
+5xx：服务器错误
+状态码大全
+HTTP协议 </description>
+    </item>
+    
+    <item>
+      <title>JS DOM</title>
+      <link>https://xjsyy.github.io/articles/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/js/</guid>
+      <description>DOM 当网页被加载时，浏览器会创建页面的文档对象模型（Document Object Model）。
+ 常用DOM //向网页输出内容 document.getElementById(&amp;#34;demo&amp;#34;).innerHTML=&amp;#34;你好 Dolly&amp;#34;; document.write(&amp;#34;你好世界!&amp;#34;); var y=x.getElementsByTagName(&amp;#34;p&amp;#34;); document.getElementById(&amp;#34;image&amp;#34;).src=&amp;#34;landscape.jpg&amp;#34;; //改变css document.getElementById(&amp;#34;p2&amp;#34;).style.color=&amp;#34;blue&amp;#34;; document.getElementById(&amp;#34;p2&amp;#34;).style.fontFamily=&amp;#34;Arial&amp;#34;; document.getElementById(&amp;#34;p2&amp;#34;).style.fontSize=&amp;#34;larger&amp;#34;; //使用 HTML DOM 来分配事件 document.getElementById(&amp;#34;myBtn&amp;#34;).onclick=function(){displayDate()}; //监听事件 document.getElementById(&amp;#34;myBtn&amp;#34;).addEventListener(&amp;#34;click&amp;#34;, displayDate); function displayDate() { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = Date(); } //参数为函数 document.getElementById(&amp;#34;myBtn&amp;#34;).addEventListener(&amp;#34;click&amp;#34;, function() { myFunction(p1, p2); }); function myFunction(a, b) { var result = a * b; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = result; } 以下代码是用于创建 &amp;lt;p&amp;gt; 元素: var para = document.createElement(&amp;#34;p&amp;#34;); 为 &amp;lt;p&amp;gt; 元素创建一个新的文本节点： var node = document.createTextNode(&amp;#34;这是一个新的段落。&amp;#34;); 将文本节点添加到 &amp;lt;p&amp;gt; 元素中： para.</description>
+    </item>
+    
+    <item>
       <title>Laravel__CSRF Protection</title>
       <link>https://xjsyy.github.io/aericles/farticle/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
