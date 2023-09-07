@@ -261,6 +261,23 @@ document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e
 };
 document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;demo&#34;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">fullName</span>();<span style="color:#75715e">//如果不加括号输出  函数表达式
 </span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">//对象是可变的
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">firstName</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#a6e22e">lastName</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;Doe&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span><span style="color:#ae81ff">50</span>, <span style="color:#a6e22e">eyeColor</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;blue&#34;</span>}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">person</span>;
+<span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;           <span style="color:#75715e">//  x.age 和 person.age 都会改变
+</span><span style="color:#75715e"></span>
+ <span style="color:#75715e">//在对象的构造函数中添加属性或方法
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">first</span>, <span style="color:#a6e22e">last</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">eyecolor</span>) {
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">first</span>;
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">last</span>;
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">eyeColor</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">eyecolor</span>;
+}
+<span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">nationality</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;English&#34;</span>;
+<span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">lastName</span>;
+};
 </code></pre></div><h1 id="javascript-函数">JavaScript 函数</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//构造函数
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">myFunction</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>};
