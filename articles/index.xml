@@ -7,21 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://xjsyy.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://xjsyy.github.io/articles/cn-physical-layer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://xjsyy.github.io/articles/cn-physical-layer/</guid>
-      <description>一.基本概念 1.作用:屏蔽掉传输媒体和通信手段的差异,用于物理层的协议也叫物理层的规程
-二.数据通信 **1.数据通信系统:**源系统(源点/发送器/接收器/终点)-传输系统-目的系统.
-2.名词解释:
-​	(1):数据-运送消息的载体. ​	(2):信号-数据的电气或电磁表现, ​	(3):模拟信号-消息的参数的取值是连续的, ​	**(4):**数字信号-&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..离散的.
-**3.信道:**单向通信-双向交替通信-双向同时通信.
-**4.基带信号:**来自信源的信号.仅对波形进行变换称为基带调制(编码)；使用载波将频率调高成为带通调制(调幅/调频/调相).
-5.信道的极限容量: ​	**(1)奈式准则:**在带宽为W的低通信道中,码元的最高传输速率为2W,若超过此上限,会产生严重的码间干扰. ​	**(2)信噪比:**信号的平均功率与噪声的平均功率之比,10lg(S/N) ​	**(3)香农公式:**极限传输速率C = W log2(1+S/N) (bit/s).启示:让每一个码元携带更多的信息量.</description>
-    </item>
-    
-    <item>
       <title>Bulid and Deploy</title>
       <link>https://xjsyy.github.io/articles/bulid-and-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -111,6 +96,21 @@ Vim 移动  基本移动: hjkl （左， 下， 上， 右） 词： w （下一
  插件
     setting
  Setting &amp;mdash;&amp;gt; Extensions &amp;ndash;&amp;gt; Run code configuration: select Run In terminal</description>
+    </item>
+    
+    <item>
+      <title>计算机网络-物理层</title>
+      <link>https://xjsyy.github.io/articles/cn-physical-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/cn-physical-layer/</guid>
+      <description>一.基本概念 1.作用:屏蔽掉传输媒体和通信手段的差异,用于物理层的协议也叫物理层的规程
+二.数据通信 **1.数据通信系统:**源系统(源点/发送器/接收器/终点)-传输系统-目的系统.
+2.名词解释:
+​	(1):数据-运送消息的载体. ​	(2):信号-数据的电气或电磁表现, ​	(3):模拟信号-消息的参数的取值是连续的, ​	**(4):**数字信号-&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..离散的.
+**3.信道:**单向通信-双向交替通信-双向同时通信.
+**4.基带信号:**来自信源的信号.仅对波形进行变换称为基带调制(编码)；使用载波将频率调高成为带通调制(调幅/调频/调相).
+5.信道的极限容量: ​	**(1)奈式准则:**在带宽为W的低通信道中,码元的最高传输速率为2W,若超过此上限,会产生严重的码间干扰. ​	**(2)信噪比:**信号的平均功率与噪声的平均功率之比,10lg(S/N) ​	**(3)香农公式:**极限传输速率C = W log2(1+S/N) (bit/s).启示:让每一个码元携带更多的信息量.</description>
     </item>
     
   </channel>
