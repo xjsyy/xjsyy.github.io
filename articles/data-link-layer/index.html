@@ -5,11 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>计算机网络-物理层 |  YYC＇S Blog</title>
+<title> YYC＇S Blog</title>
 <meta name="keywords" content="" />
-<meta name="description" content="Click on me to see more content.">
+<meta name="description" content="数据链路层 数据链路和帧   链路:一个节点到另一个相邻节点的物理线路（有线或无线），而中间没有其他交换节点。
+  数据链路:增加了实现通信协议的硬件或软件——网络适配器，包括了数据链路层和物理层的功能。
+  协议数据单元：帧。数据链路层把从网络层交下来的数据构成帧，及把接收到的帧中的数据中的数据取出交给网络层。
+  三个基本问题  封装成帧：给一段数据添加首部和尾部，有帧定界的作用。注意，数据部分有长度上限——MTU。 透明传输：不管数据是怎样的比特组合，都能在数据链路层传输。为了避免误识别数据为控制信息，采用字符填充或字节填充。 差错检测：如比特差错，采取循环冗余检测技术CRC（P76）  点对点协议   可改变数据内容  组成：将IP数据报封装到串行链路的方法，建立、配置和测试数据连接的链路控制协议LCP，一套网络控制协议NCP。
+  字节填充：将数据中的字节改为7D
+  零比特填充：传输过程中加0。
+  使用广播信道的数据链路   静态划分信道：三个复用。
+  动态媒体接入（多点接入）：随机接入（以太网）和受控接入
+  ">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/articles/cn-physical-layer/" />
+<link rel="canonical" href="https://xjsyy.github.io/articles/data-link-layer/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -131,11 +139,8 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
     <h1 class="post-title">
-      计算机网络-物理层
+      
     </h1>
-    <div class="post-description">
-      Click on me to see more content.
-    </div>
     <div class="post-meta">1 min&nbsp;·&nbsp;Yang Yvchun</div>
   </header> <div class="toc">
     <details >
@@ -145,22 +150,18 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#%e4%b8%80%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="一.基本概念">一.基本概念</a></li>
-                <li>
-                    <a href="#%e4%ba%8c%e6%95%b0%e6%8d%ae%e9%80%9a%e4%bf%a1" aria-label="二.数据通信">二.数据通信</a></li>
-                <li>
-                    <a href="#%e4%b8%89%e9%9d%9e%e5%bc%95%e5%af%bc%e5%9e%8b%e4%bc%a0%e8%be%93%e5%aa%92%e4%bd%93" aria-label="三.非引导型传输媒体">三.非引导型传输媒体</a></li>
-                <li>
-                    <a href="#%e5%9b%9b%e4%bf%a1%e9%81%93%e5%a4%8d%e7%94%a8%e6%8a%80%e6%9c%af" aria-label="四.信道复用技术">四.信道复用技术</a><ul>
+                    <a href="#%e6%95%b0%e6%8d%ae%e9%93%be%e8%b7%af%e5%b1%82" aria-label="数据链路层">数据链路层</a><ul>
                         
                 <li>
-                    <a href="#%e9%a2%91%e5%88%86%e5%a4%8d%e7%94%a8fdm" aria-label="频分复用(FDM)">频分复用(<code>FDM</code>)</a></li>
+                    <a href="#%e6%95%b0%e6%8d%ae%e9%93%be%e8%b7%af%e5%92%8c%e5%b8%a7" aria-label="数据链路和帧">数据链路和帧</a><ul>
+                        
                 <li>
-                    <a href="#%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8tdm" aria-label="时分复用(TDM)">时分复用(<code>TDM</code>)</a></li>
+                    <a href="#%e4%b8%89%e4%b8%aa%e5%9f%ba%e6%9c%ac%e9%97%ae%e9%a2%98" aria-label="三个基本问题">三个基本问题</a></li></ul>
+                </li>
                 <li>
-                    <a href="#%e6%b3%a2%e5%88%86%e5%a4%8d%e7%94%a8wdm" aria-label="波分复用(WDM)">波分复用(<code>WDM</code>)</a></li>
+                    <a href="#%e7%82%b9%e5%af%b9%e7%82%b9%e5%8d%8f%e8%ae%ae" aria-label="点对点协议">点对点协议</a></li>
                 <li>
-                    <a href="#%e7%a0%81%e5%88%86%e5%a4%8d%e7%94%a8cdm" aria-label="码分复用(CDM)">码分复用(<code>CDM</code>)</a>
+                    <a href="#%e4%bd%bf%e7%94%a8%e5%b9%bf%e6%92%ad%e4%bf%a1%e9%81%93%e7%9a%84%e6%95%b0%e6%8d%ae%e9%93%be%e8%b7%af" aria-label="使用广播信道的数据链路">使用广播信道的数据链路</a>
                 </li>
             </ul>
             </li>
@@ -170,71 +171,47 @@
 </div>
 
   <div class="post-content">
-  <h1 id="一基本概念">一.基本概念</h1>
-<p><strong>1.作用</strong>:屏蔽掉传输媒体和通信手段的差异,用于物理层的协议也叫物理层的<em>规程</em></p>
-<h1 id="二数据通信">二.数据通信</h1>
-<p>1.<strong>数据通信系统</strong>:源系统(源点/发送器/接收器/终点)-传输系统-目的系统.</p>
-<p><strong>2.名词解释:</strong></p>
+  <h1 id="数据链路层">数据链路层</h1>
+<h2 id="数据链路和帧">数据链路和帧</h2>
 <ol>
-<li>​	数据-运送消息的载体.</li>
-<li>​	信号-数据的电气或电磁表现,</li>
-<li>​	模拟信号-消息的参数的取值是连续的,</li>
-<li>​	数字信号-&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..离散的.</li>
+<li>
+<p><strong>链路</strong>:一个节点到另一个相邻节点的物理线路（有线或无线），<!-- raw HTML omitted -->而中间没有其他交换节点<!-- raw HTML omitted -->。</p>
+</li>
+<li>
+<p><strong>数据链路</strong>:增加了实现通信协议的硬件或软件——网络适配器，包括了数据链路层和物理层的功能。</p>
+</li>
+<li>
+<p><strong>协议数据单元</strong>：帧。数据链路层把从网络层交下来的数据构成帧，及把接收到的帧中的数据中的数据取出交给网络层。</p>
+</li>
 </ol>
-<p>3.<strong>信道</strong>:单向通信-双向交替通信-双向同时通信.</p>
-<p>4.<strong>基带信号</strong>:来自信源的信号.仅对波形进行变换称为基带调制(编码)；使用载波将频率调高成为带通调制(调幅/调频/调相).</p>
-<p>5.<strong>信道的极限容量</strong>:</p>
-<ul>
-<li>
-<p>​	<strong>奈式准则</strong>:在带宽为<code>W</code>的低通信道中,码元的最高传输速率为<code>2W</code>,若超过此上限,会产生严重的码间干扰.</p>
-</li>
-<li>
-<p>​	<strong>信噪比</strong>:信号的平均功率与噪声的平均功率之比,<code>10lg(S/N)</code>,与误码率成反比.</p>
-</li>
-<li>
-<p>​	<strong>香农公式</strong>:极限传输速率<code>C = W log2(1+S/N) (bit/s)</code>.启示:让每一个码元携带更多的信息量.</p>
-</li>
-</ul>
-<h1 id="三非引导型传输媒体">三.非引导型传输媒体</h1>
-<p>微波接力通信:</p>
-<ul>
-<li>信道容量大.</li>
-<li>比工业干扰和天电干扰频率高,传输质量高.</li>
-<li>建设投资少.</li>
-<li>受天气影响大</li>
-<li>隐蔽性和保密性差</li>
-<li>耗费更多的人力和财力.</li>
-</ul>
-<p>卫星通信:</p>
-<ul>
-<li><strong>传播</strong>时延大,<code>250-300ms</code></li>
-</ul>
-<h1 id="四信道复用技术">四.信道复用技术</h1>
+<h3 id="三个基本问题">三个基本问题</h3>
+<ol>
+<li><strong>封装成帧</strong>：给一段数据添加首部和尾部，有<em>帧定界</em>的作用。注意，数据部分有长度上限——MTU。</li>
+<li><strong>透明传输</strong>：不管数据是怎样的比特组合，都能在数据链路层传输。为了避免误识别数据为控制信息，采用字符填充或字节填充。</li>
+<li><strong>差错检测</strong>：如比特差错，采取循环冗余检测技术CRC（P76）</li>
+</ol>
+<h2 id="点对点协议">点对点协议</h2>
 <ol>
 <li>
-<h2 id="频分复用fdm">频分复用(<code>FDM</code>)</h2>
-<ul>
-<li>把各路信号分别搬到适当的频率位置.</li>
-</ul>
+<p><!-- raw HTML omitted --><em><strong>可改变数据内容</strong></em><!-- raw HTML omitted --></p>
 </li>
 <li>
-<h2 id="时分复用tdm">时分复用(<code>TDM</code>)</h2>
-<ul>
-<li>所有用户在不同的时间占用同样的频带宽度.</li>
-</ul>
+<p><strong>组成</strong>：将IP数据报封装到串行链路的方法，建立、配置和测试数据连接的链路控制协议LCP，一套网络控制协议NCP。</p>
 </li>
 <li>
-<h2 id="波分复用wdm">波分复用(<code>WDM</code>)</h2>
-<ul>
-<li>光的频分复用,与1同理</li>
-</ul>
+<p><strong>字节填充</strong>：将数据中的字节改为7D</p>
 </li>
 <li>
-<h2 id="码分复用cdm">码分复用(<code>CDM</code>)</h2>
-<ul>
-<li>将不同的信号编码成不同的码序列，然后将它们叠加在一起传输 , 然后在同一频率上进行传输</li>
-<li><strong>抗干扰能力强</strong>：由于每个信号使用不同的码序列，即使在传输过程中发生干扰，接收端仍然可以正确解码出原始信号。</li>
-</ul>
+<p><strong>零比特填充</strong>：传输过程中加0。</p>
+</li>
+</ol>
+<h2 id="使用广播信道的数据链路">使用广播信道的数据链路</h2>
+<ol>
+<li>
+<p><strong>静态划分信道</strong>：三个复用。</p>
+</li>
+<li>
+<p><strong>动态媒体接入（多点接入）</strong>：随机接入（以太网）和受控接入</p>
 </li>
 </ol>
 

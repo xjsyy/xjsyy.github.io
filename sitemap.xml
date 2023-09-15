@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://xjsyy.github.io/articles/data-link-layer/</loc>
+  </url><url>
     <loc>https://xjsyy.github.io/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/aericles/</loc>
@@ -31,6 +33,8 @@
     <loc>https://xjsyy.github.io/projects/math-brain-trainer/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/projects/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/regular-expression/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/articles/article/</loc>
   </url><url>

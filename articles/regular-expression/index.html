@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>计算机网络-物理层 |  YYC＇S Blog</title>
+<title>Regular Expression |  YYC＇S Blog</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Click on me to see more content.">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/articles/cn-physical-layer/" />
+<link rel="canonical" href="https://xjsyy.github.io/articles/regular-expression/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -131,7 +131,7 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
     <h1 class="post-title">
-      计算机网络-物理层
+      Regular Expression
     </h1>
     <div class="post-description">
       Click on me to see more content.
@@ -145,96 +145,42 @@
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#%e4%b8%80%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="一.基本概念">一.基本概念</a></li>
+                    <a href="#%e5%b8%b8%e7%94%a8%e7%bc%a9%e5%86%99" aria-label="常用缩写：">常用缩写：</a></li>
                 <li>
-                    <a href="#%e4%ba%8c%e6%95%b0%e6%8d%ae%e9%80%9a%e4%bf%a1" aria-label="二.数据通信">二.数据通信</a></li>
+                    <a href="#-%e7%ba%a6%e5%ae%9a" aria-label="“*” 约定">“*” 约定</a></li>
                 <li>
-                    <a href="#%e4%b8%89%e9%9d%9e%e5%bc%95%e5%af%bc%e5%9e%8b%e4%bc%a0%e8%be%93%e5%aa%92%e4%bd%93" aria-label="三.非引导型传输媒体">三.非引导型传输媒体</a></li>
-                <li>
-                    <a href="#%e5%9b%9b%e4%bf%a1%e9%81%93%e5%a4%8d%e7%94%a8%e6%8a%80%e6%9c%af" aria-label="四.信道复用技术">四.信道复用技术</a><ul>
-                        
-                <li>
-                    <a href="#%e9%a2%91%e5%88%86%e5%a4%8d%e7%94%a8fdm" aria-label="频分复用(FDM)">频分复用(<code>FDM</code>)</a></li>
-                <li>
-                    <a href="#%e6%97%b6%e5%88%86%e5%a4%8d%e7%94%a8tdm" aria-label="时分复用(TDM)">时分复用(<code>TDM</code>)</a></li>
-                <li>
-                    <a href="#%e6%b3%a2%e5%88%86%e5%a4%8d%e7%94%a8wdm" aria-label="波分复用(WDM)">波分复用(<code>WDM</code>)</a></li>
-                <li>
-                    <a href="#%e7%a0%81%e5%88%86%e5%a4%8d%e7%94%a8cdm" aria-label="码分复用(CDM)">码分复用(<code>CDM</code>)</a>
+                    <a href="#%e4%b8%be%e4%be%8b" aria-label="举例">举例</a>
                 </li>
-            </ul>
-            </li>
             </ul>
         </div>
     </details>
 </div>
 
   <div class="post-content">
-  <h1 id="一基本概念">一.基本概念</h1>
-<p><strong>1.作用</strong>:屏蔽掉传输媒体和通信手段的差异,用于物理层的协议也叫物理层的<em>规程</em></p>
-<h1 id="二数据通信">二.数据通信</h1>
-<p>1.<strong>数据通信系统</strong>:源系统(源点/发送器/接收器/终点)-传输系统-目的系统.</p>
-<p><strong>2.名词解释:</strong></p>
-<ol>
-<li>​	数据-运送消息的载体.</li>
-<li>​	信号-数据的电气或电磁表现,</li>
-<li>​	模拟信号-消息的参数的取值是连续的,</li>
-<li>​	数字信号-&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;..离散的.</li>
-</ol>
-<p>3.<strong>信道</strong>:单向通信-双向交替通信-双向同时通信.</p>
-<p>4.<strong>基带信号</strong>:来自信源的信号.仅对波形进行变换称为基带调制(编码)；使用载波将频率调高成为带通调制(调幅/调频/调相).</p>
-<p>5.<strong>信道的极限容量</strong>:</p>
-<ul>
-<li>
-<p>​	<strong>奈式准则</strong>:在带宽为<code>W</code>的低通信道中,码元的最高传输速率为<code>2W</code>,若超过此上限,会产生严重的码间干扰.</p>
-</li>
-<li>
-<p>​	<strong>信噪比</strong>:信号的平均功率与噪声的平均功率之比,<code>10lg(S/N)</code>,与误码率成反比.</p>
-</li>
-<li>
-<p>​	<strong>香农公式</strong>:极限传输速率<code>C = W log2(1+S/N) (bit/s)</code>.启示:让每一个码元携带更多的信息量.</p>
-</li>
-</ul>
-<h1 id="三非引导型传输媒体">三.非引导型传输媒体</h1>
-<p>微波接力通信:</p>
-<ul>
-<li>信道容量大.</li>
-<li>比工业干扰和天电干扰频率高,传输质量高.</li>
-<li>建设投资少.</li>
-<li>受天气影响大</li>
-<li>隐蔽性和保密性差</li>
-<li>耗费更多的人力和财力.</li>
-</ul>
-<p>卫星通信:</p>
-<ul>
-<li><strong>传播</strong>时延大,<code>250-300ms</code></li>
-</ul>
-<h1 id="四信道复用技术">四.信道复用技术</h1>
+  <h1 id="常用缩写">常用缩写：</h1>
+<p><code>RE</code>:Regular Expression</p>
+<p><code>NFA</code>:Non-deterministic Finite automaton</p>
+<p><code>DFA</code>:Deterministic Finite automaton</p>
+<h1 id="-约定">“*” 约定</h1>
+<p>“*”具有最高优先级，左结合。</p>
+<p>其连接具有次高优先级，左结合。</p>
+<p>“|“优先级最低，选择关系，左结合。</p>
+<h1 id="举例">举例</h1>
 <ol>
 <li>
-<h2 id="频分复用fdm">频分复用(<code>FDM</code>)</h2>
-<ul>
-<li>把各路信号分别搬到适当的频率位置.</li>
-</ul>
+<p>a | b：{a，b}</p>
 </li>
 <li>
-<h2 id="时分复用tdm">时分复用(<code>TDM</code>)</h2>
-<ul>
-<li>所有用户在不同的时间占用同样的频带宽度.</li>
-</ul>
+<p>（a | b）|（a | b）：{aa，bb，ab，ba}</p>
 </li>
 <li>
-<h2 id="波分复用wdm">波分复用(<code>WDM</code>)</h2>
-<ul>
-<li>光的频分复用,与1同理</li>
-</ul>
+<p>a *： 0个或多个a</p>
 </li>
 <li>
-<h2 id="码分复用cdm">码分复用(<code>CDM</code>)</h2>
-<ul>
-<li>将不同的信号编码成不同的码序列，然后将它们叠加在一起传输 , 然后在同一频率上进行传输</li>
-<li><strong>抗干扰能力强</strong>：由于每个信号使用不同的码序列，即使在传输过程中发生干扰，接收端仍然可以正确解码出原始信号。</li>
-</ul>
+<p>(a | b)：0个或多个a或b的实例</p>
+</li>
+<li>
+<p>a | a * b：{a，aab，b，ab}</p>
 </li>
 </ol>
 

@@ -7,6 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://xjsyy.github.io/articles/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title></title>
+      <link>https://xjsyy.github.io/articles/data-link-layer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/data-link-layer/</guid>
+      <description>数据链路层 数据链路和帧   链路:一个节点到另一个相邻节点的物理线路（有线或无线），而中间没有其他交换节点。
+  数据链路:增加了实现通信协议的硬件或软件——网络适配器，包括了数据链路层和物理层的功能。
+  协议数据单元：帧。数据链路层把从网络层交下来的数据构成帧，及把接收到的帧中的数据中的数据取出交给网络层。
+  三个基本问题  封装成帧：给一段数据添加首部和尾部，有帧定界的作用。注意，数据部分有长度上限——MTU。 透明传输：不管数据是怎样的比特组合，都能在数据链路层传输。为了避免误识别数据为控制信息，采用字符填充或字节填充。 差错检测：如比特差错，采取循环冗余检测技术CRC（P76）  点对点协议   可改变数据内容  组成：将IP数据报封装到串行链路的方法，建立、配置和测试数据连接的链路控制协议LCP，一套网络控制协议NCP。
+  字节填充：将数据中的字节改为7D
+  零比特填充：传输过程中加0。
+  使用广播信道的数据链路   静态划分信道：三个复用。
+  动态媒体接入（多点接入）：随机接入（以太网）和受控接入
+  </description>
+    </item>
+    
+    <item>
       <title>Bulid and Deploy</title>
       <link>https://xjsyy.github.io/articles/bulid-and-deploy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -77,6 +94,26 @@ Vim 移动  基本移动: hjkl （左， 下， 上， 右） 词： w （下一
     </item>
     
     <item>
+      <title>Regular Expression</title>
+      <link>https://xjsyy.github.io/articles/regular-expression/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjsyy.github.io/articles/regular-expression/</guid>
+      <description>常用缩写： RE:Regular Expression
+NFA:Non-deterministic Finite automaton
+DFA:Deterministic Finite automaton
+“*” 约定 “*”具有最高优先级，左结合。
+其连接具有次高优先级，左结合。
+“|“优先级最低，选择关系，左结合。
+举例   a | b：{a，b}
+  （a | b）|（a | b）：{aa，bb，ab，ba}
+  a *： 0个或多个a
+  (a | b)：0个或多个a或b的实例
+  a | a * b：{a，aab，b，ab}
+  </description>
+    </item>
+    
+    <item>
       <title>Surprise Surprise</title>
       <link>https://xjsyy.github.io/articles/article/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -110,7 +147,12 @@ Vim 移动  基本移动: hjkl （左， 下， 上， 右） 词： w （下一
  ​	数据-运送消息的载体. ​	信号-数据的电气或电磁表现, ​	模拟信号-消息的参数的取值是连续的, ​	数字信号-&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;..离散的.  3.信道:单向通信-双向交替通信-双向同时通信.
 4.基带信号:来自信源的信号.仅对波形进行变换称为基带调制(编码)；使用载波将频率调高成为带通调制(调幅/调频/调相).
 5.信道的极限容量:
- ​	奈式准则:在带宽为W的低通信道中,码元的最高传输速率为2W,若超过此上限,会产生严重的码间干扰. ​	信噪比:信号的平均功率与噪声的平均功率之比,10lg(S/N) ​	香农公式:极限传输速率C = W log2(1+S/N) (bit/s).启示:让每一个码元携带更多的信息量.  </description>
+  ​	奈式准则:在带宽为W的低通信道中,码元的最高传输速率为2W,若超过此上限,会产生严重的码间干扰.
+  ​	信噪比:信号的平均功率与噪声的平均功率之比,10lg(S/N),与误码率成反比.
+  ​	香农公式:极限传输速率C = W log2(1+S/N) (bit/s).启示:让每一个码元携带更多的信息量.
+  三.非引导型传输媒体 微波接力通信:
+ 信道容量大. 比工业干扰和天电干扰频率高,传输质量高. 建设投资少. 受天气影响大 隐蔽性和保密性差 耗费更多的人力和财力.  卫星通信:
+ 传播时延大,250-300ms  四.信道复用技术   频分复用(FDM)  把各路信号分别搬到适当的频率位置.    时分复用(TDM)  所有用户在不同的时间占用同样的频带宽度.    波分复用(WDM)  光的频分复用,与1同理    码分复用(CDM)  将不同的信号编码成不同的码序列，然后将它们叠加在一起传输 , 然后在同一频率上进行传输 抗干扰能力强：由于每个信号使用不同的码序列，即使在传输过程中发生干扰，接收端仍然可以正确解码出原始信号。    </description>
     </item>
     
   </channel>
