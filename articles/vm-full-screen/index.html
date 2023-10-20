@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>VScode configure |  YYC＇S Notes</title>
+<title>Debian full screen tutorial |  YYC＇S Notes</title>
 <meta name="keywords" content="" />
 <meta name="description" content="Click on me to see more content.">
 <meta name="author" content="Yang Yvchun">
-<link rel="canonical" href="https://xjsyy.github.io/articles/vscode-config/" />
+<link rel="canonical" href="https://xjsyy.github.io/articles/vm-full-screen/" />
 <link crossorigin="anonymous" href="/assets/css/stylesheet.min.7bfe087ae72df31787ec7a1360dd05ee246a179b51cf7a30a904b39d7f813b69.css" integrity="sha256-e/4Ieuct8xeH7HoTYN0F7iRqF5tRz3owqQSznX&#43;BO2k=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -131,7 +131,7 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://xjsyy.github.io">Home</a>&nbsp;»&nbsp;<a href="https://xjsyy.github.io/articles/">Articles</a></div>
     <h1 class="post-title">
-      VScode configure
+      Debian full screen tutorial
     </h1>
     <div class="post-description">
       Click on me to see more content.
@@ -140,20 +140,24 @@
   </header> 
 
   <div class="post-content">
-  <p>本配置仅能 <strong>运行</strong> C/C++程序，不具有Debug功能</p>
-<blockquote>
-<p>插件</p>
-</blockquote>
-<figure><img src="/images/c.png"/>
-</figure>
-
-<figure><img src="/images/CR.png"/>
-</figure>
-
-<blockquote>
-<p>setting</p>
-</blockquote>
-<p>Setting &mdash;&gt; Extensions &ndash;&gt; Run code configuration: select <code>Run In terminal</code></p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su      <span style="color:#75715e">#管理员目录</span>
+cd /etc/apt
+cp sources.list sources.list.bak  <span style="color:#75715e">#备份sources.list文件</span>
+</code></pre></div><p>将文件内容<strong>替换</strong>为下列内容，即更改软件源</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex">deb http://mirrors.163.com/debian-security bullseye-security main contrib
+deb http://mirrors.163.com/debian/ bullseye-updates main contrib
+deb http://mirrors.163.com/debian bullseye main contrib 
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt update 
+apt install build-essential dkms linux-headers-<span style="color:#66d9ef">$(</span>uname -r<span style="color:#66d9ef">)</span> <span style="color:#75715e">#更新</span>
+</code></pre></div><p>然后点击虚拟机的“安装增强功能”</p>
+<p><img loading="lazy" src="C:%5cUsers%5cXJSYY%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20230623171816549.png" alt="image-20230623171816549"  />
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /media
+cd cdrom
+cp VBoxLinuxAdditions.run /tmp
+cd /tmp
+./VBoxLinuxAdditions.run
+</code></pre></div><p>然后重启，可以从虚拟机选择全屏模式了</p>
 
   </div>
 

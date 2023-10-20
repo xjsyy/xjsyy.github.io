@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xjsyy.github.io/articles/data-link-layer/</loc>
-  </url><url>
     <loc>https://xjsyy.github.io/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/aericles/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/ajax/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/articles/</loc>
   </url><url>
@@ -15,6 +15,10 @@
     <loc>https://xjsyy.github.io/categories/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/contact/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/data-link-layer/</loc>
+  </url><url>
+    <loc>https://xjsyy.github.io/articles/vm-full-screen/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/articles/git-process-test/</loc>
   </url><url>
@@ -34,7 +38,7 @@
   </url><url>
     <loc>https://xjsyy.github.io/projects/</loc>
   </url><url>
-    <loc>https://xjsyy.github.io/articles/regular-expression/</loc>
+    <loc>https://xjsyy.github.io/articles/compilers/</loc>
   </url><url>
     <loc>https://xjsyy.github.io/articles/article/</loc>
   </url><url>
